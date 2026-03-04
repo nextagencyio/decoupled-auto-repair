@@ -1,0 +1,154 @@
+{
+  "data": {
+    "nodeTeamMembers": {
+      "__typename": "NodeTeamMemberConnection",
+      "nodes": [
+        {
+          "__typename": "NodeTeamMember",
+          "id": "team-mike",
+          "title": "Mike Sullivan",
+          "path": "/team/mike-sullivan",
+          "body": {
+            "processed": "<p>Mike founded Summit Auto Care in 1994 with a simple mission: provide honest, quality auto repair at fair prices. A second-generation mechanic, Mike learned the trade from his father and has stayed current with the latest automotive technologies through continuous training.</p><p>When he's not under a hood, Mike coaches youth baseball and volunteers with the local Habitat for Humanity chapter.</p>",
+            "summary": "Mike founded Summit Auto Care in 1994 with a simple mission: provide honest, quality auto repair at fair prices. A second-generation mechanic, Mike learned the trade from his father and has stayed cur"
+          },
+          "position": "Owner & Master Technician",
+          "certifications": [
+            "ASE Master Technician",
+            "ASE L1 Advanced Engine Performance",
+            "Toyota TechStream Certified"
+          ],
+          "yearsExperience": 35,
+          "specialties": [
+            "Engine Performance",
+            "Hybrid Systems",
+            "Toyota/Lexus"
+          ],
+          "photo": {
+            "url": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80",
+            "alt": "Mike Sullivan, owner and master technician",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeTeamMember",
+          "id": "team-rachel",
+          "title": "Rachel Torres",
+          "path": "/team/rachel-torres",
+          "body": {
+            "processed": "<p>Rachel joined Summit in 2015 after earning her automotive technology degree from UTI. She quickly distinguished herself with her diagnostic skills and attention to detail. Rachel specializes in European vehicles and is one of the few female ASE-certified master technicians in the region.</p><p>She regularly attends manufacturer training programs and mentors apprentice technicians at the shop.</p>",
+            "summary": "Rachel joined Summit in 2015 after earning her automotive technology degree from UTI. She quickly distinguished herself with her diagnostic skills and attention to detail. Rachel specializes in Europe"
+          },
+          "position": "Lead Diagnostic Technician",
+          "certifications": [
+            "ASE Master Technician",
+            "BMW ISTA Certified",
+            "Bosch Diagnostics Certified"
+          ],
+          "yearsExperience": 11,
+          "specialties": [
+            "European Vehicles",
+            "Electrical Diagnostics",
+            "BMW/Mercedes/Audi"
+          ],
+          "photo": {
+            "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80",
+            "alt": "Rachel Torres, lead diagnostic technician",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeTeamMember",
+          "id": "team-james",
+          "title": "James Wright",
+          "path": "/team/james-wright",
+          "body": {
+            "processed": "<p>James brings 20 years of experience specializing in transmissions and drivetrain systems. Before joining Summit, he worked at a dealership transmission center where he rebuilt thousands of automatic and manual transmissions.</p><p>James is known for his ability to diagnose complex drivetrain issues that other shops miss. His rebuild work carries our extended warranty with confidence.</p>",
+            "summary": "James brings 20 years of experience specializing in transmissions and drivetrain systems. Before joining Summit, he worked at a dealership transmission center where he rebuilt thousands of automatic a"
+          },
+          "position": "Transmission Specialist",
+          "certifications": [
+            "ASE A2 Automatic Transmission",
+            "ASE A3 Manual Drivetrain",
+            "ATRA Certified Rebuilder"
+          ],
+          "yearsExperience": 20,
+          "specialties": [
+            "Automatic Transmissions",
+            "Manual Transmissions",
+            "Transfer Cases",
+            "Differentials"
+          ],
+          "photo": {
+            "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+            "alt": "James Wright, transmission specialist",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

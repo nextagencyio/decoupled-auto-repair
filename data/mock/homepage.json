@@ -1,0 +1,59 @@
+{
+  "data": {
+    "nodeHomepages": {
+      "__typename": "NodeHomepageConnection",
+      "nodes": [
+        {
+          "__typename": "NodeHomepage",
+          "id": "homepage",
+          "title": "Summit Auto Care",
+          "path": "/homepage",
+          "heroTitle": "Honest Auto Repair You Can Trust",
+          "heroSubtitle": "Family-Owned & ASE Certified Since 1994",
+          "heroDescription": {
+            "processed": "<p>Summit Auto Care provides reliable, transparent auto repair and maintenance services for all makes and models. Our ASE-certified technicians use the latest diagnostic equipment to get you back on the road safely.</p>",
+            "summary": "Summit Auto Care provides reliable, transparent auto repair and maintenance services for all makes and models. Our ASE-certified technicians use the latest diagnostic equipment to get you back on the "
+          },
+          "statsItems": [
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-years",
+              "title": "",
+              "number": "30+",
+              "label": "Years in Business"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-vehicles",
+              "title": "",
+              "number": "50,000+",
+              "label": "Vehicles Serviced"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-techs",
+              "title": "",
+              "number": "12",
+              "label": "ASE-Certified Techs"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-rating",
+              "title": "",
+              "number": "4.9",
+              "label": "Star Rating"
+            }
+          ],
+          "featuredItemsTitle": "Our Services",
+          "ctaTitle": "Need a Repair? Book Online Today",
+          "ctaDescription": {
+            "processed": "<p>Schedule your appointment online and skip the wait. We offer free estimates, shuttle service, and a comfortable waiting area with Wi-Fi and complimentary coffee.</p>",
+            "summary": "Schedule your appointment online and skip the wait. We offer free estimates, shuttle service, and a comfortable waiting area with Wi-Fi and complimentary coffee."
+          },
+          "ctaPrimary": "Book Appointment",
+          "ctaSecondary": "View Coupons"
+        }
+      ]
+    }
+  }
+}

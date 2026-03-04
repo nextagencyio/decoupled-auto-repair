@@ -1,0 +1,295 @@
+{
+  "model": [
+    {
+      "bundle": "homepage",
+      "label": "Homepage",
+      "description": "Landing page with hero section, statistics, and call-to-action areas",
+      "fields": [
+        { "id": "hero_title", "label": "Hero Title", "type": "string" },
+        { "id": "hero_subtitle", "label": "Hero Subtitle", "type": "string" },
+        { "id": "hero_description", "label": "Hero Description", "type": "text" },
+        { "id": "stats_items", "label": "Statistics", "type": "paragraph(stat_item)[]" },
+        { "id": "featured_items_title", "label": "Featured Items Title", "type": "string" },
+        { "id": "cta_title", "label": "CTA Title", "type": "string" },
+        { "id": "cta_description", "label": "CTA Description", "type": "text" },
+        { "id": "cta_primary", "label": "Primary CTA", "type": "string" },
+        { "id": "cta_secondary", "label": "Secondary CTA", "type": "string" }
+      ]
+    },
+    {
+      "bundle": "service",
+      "label": "Service",
+      "description": "An auto repair service offered by the shop",
+      "body": true,
+      "fields": [
+        { "id": "summary", "label": "Summary", "type": "string" },
+        { "id": "price_range", "label": "Price Range", "type": "string" },
+        { "id": "estimated_time", "label": "Estimated Time", "type": "string" },
+        { "id": "warranty_info", "label": "Warranty Information", "type": "string" },
+        { "id": "image", "label": "Service Image", "type": "image" }
+      ]
+    },
+    {
+      "bundle": "team_member",
+      "label": "Team Member",
+      "description": "A mechanic or staff member at the shop",
+      "body": true,
+      "fields": [
+        { "id": "position", "label": "Position", "type": "string" },
+        { "id": "certifications", "label": "Certifications", "type": "string[]" },
+        { "id": "years_experience", "label": "Years of Experience", "type": "integer" },
+        { "id": "specialties", "label": "Specialties", "type": "string[]" },
+        { "id": "photo", "label": "Photo", "type": "image" }
+      ]
+    },
+    {
+      "bundle": "coupon",
+      "label": "Coupon",
+      "description": "A special offer or discount coupon",
+      "body": true,
+      "fields": [
+        { "id": "discount_amount", "label": "Discount Amount", "type": "string!" },
+        { "id": "coupon_code", "label": "Coupon Code", "type": "string" },
+        { "id": "valid_until", "label": "Valid Until", "type": "datetime" },
+        { "id": "terms", "label": "Terms & Conditions", "type": "text" },
+        { "id": "image", "label": "Coupon Image", "type": "image" }
+      ]
+    },
+    {
+      "bundle": "page",
+      "label": "Basic Page",
+      "description": "Static content pages for about, contact, policies, etc.",
+      "body": true,
+      "fields": []
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "stat_item",
+      "label": "Statistic Item",
+      "description": "A single statistic with number and label",
+      "fields": [
+        { "id": "number", "label": "Number", "type": "string!" },
+        { "id": "label", "label": "Label", "type": "string!" }
+      ]
+    }
+  ],
+  "content": [
+    {
+      "id": "stat-years",
+      "type": "paragraph.stat_item",
+      "values": { "number": "30+", "label": "Years in Business" }
+    },
+    {
+      "id": "stat-vehicles",
+      "type": "paragraph.stat_item",
+      "values": { "number": "50,000+", "label": "Vehicles Serviced" }
+    },
+    {
+      "id": "stat-techs",
+      "type": "paragraph.stat_item",
+      "values": { "number": "12", "label": "ASE-Certified Techs" }
+    },
+    {
+      "id": "stat-rating",
+      "type": "paragraph.stat_item",
+      "values": { "number": "4.9", "label": "Star Rating" }
+    },
+    {
+      "id": "homepage",
+      "type": "node.homepage",
+      "path": "/homepage",
+      "values": {
+        "title": "Summit Auto Care",
+        "hero_title": "Honest Auto Repair You Can Trust",
+        "hero_subtitle": "Family-Owned & ASE Certified Since 1994",
+        "hero_description": "<p>Summit Auto Care provides reliable, transparent auto repair and maintenance services for all makes and models. Our ASE-certified technicians use the latest diagnostic equipment to get you back on the road safely.</p>",
+        "stats_items": ["@stat-years", "@stat-vehicles", "@stat-techs", "@stat-rating"],
+        "featured_items_title": "Our Services",
+        "cta_title": "Need a Repair? Book Online Today",
+        "cta_description": "<p>Schedule your appointment online and skip the wait. We offer free estimates, shuttle service, and a comfortable waiting area with Wi-Fi and complimentary coffee.</p>",
+        "cta_primary": "Book Appointment",
+        "cta_secondary": "View Coupons"
+      }
+    },
+    {
+      "id": "service-oil-change",
+      "type": "node.service",
+      "path": "/services/oil-change",
+      "values": {
+        "title": "Oil Change & Filter",
+        "body": "<p>Regular oil changes are the single most important thing you can do to extend the life of your engine. Our technicians use premium synthetic and conventional oils and OEM-spec filters for every service.</p><h2>What's Included</h2><ul><li>Drain and replace engine oil (conventional or synthetic)</li><li>Replace oil filter with OEM-spec filter</li><li>Inspect and top off all fluids</li><li>Check tire pressure and condition</li><li>Multi-point vehicle inspection</li></ul><h2>Oil Types Available</h2><p>We stock conventional, synthetic blend, full synthetic, and high-mileage formulations from Mobil 1, Valvoline, and Pennzoil.</p>",
+        "summary": "Conventional and synthetic oil changes with multi-point inspection.",
+        "price_range": "$39.99 - $89.99",
+        "estimated_time": "30-45 minutes",
+        "warranty_info": "3,000 miles or 3 months",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=800&q=80",
+          "alt": "Mechanic performing an oil change",
+          "title": "Oil Change Service"
+        }
+      }
+    },
+    {
+      "id": "service-brakes",
+      "type": "node.service",
+      "path": "/services/brake-repair",
+      "values": {
+        "title": "Brake Repair & Replacement",
+        "body": "<p>Your brakes are your vehicle's most critical safety system. Our technicians perform thorough brake inspections and use premium ceramic pads and quality rotors to restore your stopping power.</p><h2>Brake Services</h2><ul><li>Brake pad replacement (ceramic or semi-metallic)</li><li>Rotor resurfacing or replacement</li><li>Brake fluid flush</li><li>Caliper inspection and repair</li><li>Anti-lock brake system (ABS) diagnostics</li></ul><h2>Warning Signs</h2><p>Squealing, grinding, vibration when braking, or a soft brake pedal all indicate it's time for a brake inspection. Don't delay -- brake problems only get more expensive over time.</p>",
+        "summary": "Complete brake inspection, pad replacement, rotor service, and ABS diagnostics.",
+        "price_range": "$149 - $499 per axle",
+        "estimated_time": "1-3 hours",
+        "warranty_info": "24 months / 24,000 miles",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+          "alt": "Close-up of a vehicle brake assembly",
+          "title": "Brake Repair Service"
+        }
+      }
+    },
+    {
+      "id": "service-diagnostics",
+      "type": "node.service",
+      "path": "/services/engine-diagnostics",
+      "values": {
+        "title": "Engine Diagnostics",
+        "body": "<p>That check engine light could mean a dozen different things. Our advanced diagnostic equipment reads fault codes, monitors live data, and pinpoints the exact issue so we fix the right problem the first time.</p><h2>Diagnostic Capabilities</h2><ul><li>OBD-II fault code reading and interpretation</li><li>Live data stream analysis</li><li>Emission system diagnostics</li><li>Electrical system testing</li><li>Computer module programming and updates</li></ul>",
+        "summary": "Advanced computer diagnostics for check engine lights and performance issues.",
+        "price_range": "$89 - $149",
+        "estimated_time": "1-2 hours",
+        "warranty_info": "Diagnostic fee applied to repair",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
+          "alt": "Diagnostic equipment connected to vehicle engine",
+          "title": "Engine Diagnostics"
+        }
+      }
+    },
+    {
+      "id": "team-mike",
+      "type": "node.team_member",
+      "path": "/team/mike-sullivan",
+      "values": {
+        "title": "Mike Sullivan",
+        "body": "<p>Mike founded Summit Auto Care in 1994 with a simple mission: provide honest, quality auto repair at fair prices. A second-generation mechanic, Mike learned the trade from his father and has stayed current with the latest automotive technologies through continuous training.</p><p>When he's not under a hood, Mike coaches youth baseball and volunteers with the local Habitat for Humanity chapter.</p>",
+        "position": "Owner & Master Technician",
+        "certifications": ["ASE Master Technician", "ASE L1 Advanced Engine Performance", "Toyota TechStream Certified"],
+        "years_experience": 35,
+        "specialties": ["Engine Performance", "Hybrid Systems", "Toyota/Lexus"],
+        "photo": {
+          "uri": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80",
+          "alt": "Mike Sullivan, owner and master technician",
+          "title": "Mike Sullivan"
+        }
+      }
+    },
+    {
+      "id": "team-rachel",
+      "type": "node.team_member",
+      "path": "/team/rachel-torres",
+      "values": {
+        "title": "Rachel Torres",
+        "body": "<p>Rachel joined Summit in 2015 after earning her automotive technology degree from UTI. She quickly distinguished herself with her diagnostic skills and attention to detail. Rachel specializes in European vehicles and is one of the few female ASE-certified master technicians in the region.</p><p>She regularly attends manufacturer training programs and mentors apprentice technicians at the shop.</p>",
+        "position": "Lead Diagnostic Technician",
+        "certifications": ["ASE Master Technician", "BMW ISTA Certified", "Bosch Diagnostics Certified"],
+        "years_experience": 11,
+        "specialties": ["European Vehicles", "Electrical Diagnostics", "BMW/Mercedes/Audi"],
+        "photo": {
+          "uri": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80",
+          "alt": "Rachel Torres, lead diagnostic technician",
+          "title": "Rachel Torres"
+        }
+      }
+    },
+    {
+      "id": "team-james",
+      "type": "node.team_member",
+      "path": "/team/james-wright",
+      "values": {
+        "title": "James Wright",
+        "body": "<p>James brings 20 years of experience specializing in transmissions and drivetrain systems. Before joining Summit, he worked at a dealership transmission center where he rebuilt thousands of automatic and manual transmissions.</p><p>James is known for his ability to diagnose complex drivetrain issues that other shops miss. His rebuild work carries our extended warranty with confidence.</p>",
+        "position": "Transmission Specialist",
+        "certifications": ["ASE A2 Automatic Transmission", "ASE A3 Manual Drivetrain", "ATRA Certified Rebuilder"],
+        "years_experience": 20,
+        "specialties": ["Automatic Transmissions", "Manual Transmissions", "Transfer Cases", "Differentials"],
+        "photo": {
+          "uri": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+          "alt": "James Wright, transmission specialist",
+          "title": "James Wright"
+        }
+      }
+    },
+    {
+      "id": "coupon-oil",
+      "type": "node.coupon",
+      "path": "/coupons/oil-change-special",
+      "values": {
+        "title": "Synthetic Oil Change Special",
+        "body": "<p>Save on a full synthetic oil change including a premium filter and our comprehensive multi-point inspection. Keep your engine running smoothly with the best protection available.</p>",
+        "discount_amount": "$20 Off",
+        "coupon_code": "SYNTH20",
+        "valid_until": "2026-06-30T23:59:59",
+        "terms": "<p>Valid for full synthetic oil change only. One coupon per vehicle per visit. Cannot be combined with other offers. Must present coupon at time of service.</p>",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=800&q=80",
+          "alt": "Synthetic oil change special offer",
+          "title": "Oil Change Coupon"
+        }
+      }
+    },
+    {
+      "id": "coupon-brakes",
+      "type": "node.coupon",
+      "path": "/coupons/brake-service-deal",
+      "values": {
+        "title": "Brake Service Package",
+        "body": "<p>Get premium ceramic brake pads and new rotors at a discounted package price. Includes a free brake inspection and road test to ensure everything is working perfectly.</p>",
+        "discount_amount": "$50 Off Per Axle",
+        "coupon_code": "BRAKES50",
+        "valid_until": "2026-05-31T23:59:59",
+        "terms": "<p>Applies to brake pad and rotor replacement on one or both axles. Includes ceramic pads and standard rotors. Performance upgrades available at additional cost. Cannot be combined with other offers.</p>",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+          "alt": "Brake service discount offer",
+          "title": "Brake Service Coupon"
+        }
+      }
+    },
+    {
+      "id": "coupon-new-customer",
+      "type": "node.coupon",
+      "path": "/coupons/new-customer-welcome",
+      "values": {
+        "title": "New Customer Welcome Discount",
+        "body": "<p>First time at Summit Auto Care? Welcome! Enjoy 15% off any service on your first visit. We're confident you'll see the Summit difference and become a customer for life.</p>",
+        "discount_amount": "15% Off First Visit",
+        "coupon_code": "WELCOME15",
+        "valid_until": "2026-12-31T23:59:59",
+        "terms": "<p>Valid for new customers only. Maximum discount of $150. Applies to labor charges. Cannot be combined with other offers or applied to tires or parts-only purchases.</p>",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
+          "alt": "New customer welcome offer",
+          "title": "New Customer Coupon"
+        }
+      }
+    },
+    {
+      "id": "about-page",
+      "type": "node.page",
+      "path": "/about",
+      "values": {
+        "title": "About Summit Auto Care",
+        "body": "<p>Summit Auto Care has been the community's trusted auto repair shop since 1994. Founded by Mike Sullivan, our family-owned business has grown through word-of-mouth referrals from satisfied customers who appreciate our honest approach to vehicle maintenance and repair.</p><h2>Our Promise</h2><p>We believe in transparent pricing, honest diagnoses, and quality workmanship. We'll never recommend a repair you don't need, and we'll always explain the options so you can make an informed decision. Every repair comes with our satisfaction guarantee.</p><h2>Our Facility</h2><p>Our 8-bay shop is equipped with the latest diagnostic technology including Hunter alignment systems, Snap-on scan tools, and manufacturer-specific programming equipment. We service all makes and models, from daily drivers to European luxury vehicles.</p>"
+      }
+    },
+    {
+      "id": "contact-page",
+      "type": "node.page",
+      "path": "/contact",
+      "values": {
+        "title": "Contact Us",
+        "body": "<p>Have a question about your vehicle or want to schedule an appointment? Give us a call or stop by. Walk-ins are welcome for quick services like oil changes and inspections.</p><h2>Shop Hours</h2><p>Monday - Friday: 7:30 AM - 5:30 PM<br/>Saturday: 8:00 AM - 1:00 PM<br/>Sunday: Closed</p><h2>Location</h2><p>Summit Auto Care<br/>1287 Summit Avenue<br/>Springfield, NJ 07081</p><h2>Contact</h2><p>Phone: (973) 555-0183<br/>Email: service@summitautocare.com</p>"
+      }
+    }
+  ]
+}

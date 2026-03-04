@@ -1,0 +1,129 @@
+{
+  "data": {
+    "nodeServices": {
+      "__typename": "NodeServiceConnection",
+      "nodes": [
+        {
+          "__typename": "NodeService",
+          "id": "service-oil-change",
+          "title": "Oil Change & Filter",
+          "path": "/services/oil-change",
+          "body": {
+            "processed": "<p>Regular oil changes are the single most important thing you can do to extend the life of your engine. Our technicians use premium synthetic and conventional oils and OEM-spec filters for every service.</p><h2>What's Included</h2><ul><li>Drain and replace engine oil (conventional or synthetic)</li><li>Replace oil filter with OEM-spec filter</li><li>Inspect and top off all fluids</li><li>Check tire pressure and condition</li><li>Multi-point vehicle inspection</li></ul><h2>Oil Types Available</h2><p>We stock conventional, synthetic blend, full synthetic, and high-mileage formulations from Mobil 1, Valvoline, and Pennzoil.</p>",
+            "summary": "Regular oil changes are the single most important thing you can do to extend the life of your engine. Our technicians use premium synthetic and conventional oils and OEM-spec filters for every service"
+          },
+          "summary": "Conventional and synthetic oil changes with multi-point inspection.",
+          "priceRange": "$39.99 - $89.99",
+          "estimatedTime": "30-45 minutes",
+          "warrantyInfo": "3,000 miles or 3 months",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=800&q=80",
+            "alt": "Mechanic performing an oil change",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeService",
+          "id": "service-brakes",
+          "title": "Brake Repair & Replacement",
+          "path": "/services/brake-repair",
+          "body": {
+            "processed": "<p>Your brakes are your vehicle's most critical safety system. Our technicians perform thorough brake inspections and use premium ceramic pads and quality rotors to restore your stopping power.</p><h2>Brake Services</h2><ul><li>Brake pad replacement (ceramic or semi-metallic)</li><li>Rotor resurfacing or replacement</li><li>Brake fluid flush</li><li>Caliper inspection and repair</li><li>Anti-lock brake system (ABS) diagnostics</li></ul><h2>Warning Signs</h2><p>Squealing, grinding, vibration when braking, or a soft brake pedal all indicate it's time for a brake inspection. Don't delay -- brake problems only get more expensive over time.</p>",
+            "summary": "Your brakes are your vehicle's most critical safety system. Our technicians perform thorough brake inspections and use premium ceramic pads and quality rotors to restore your stopping power.Brake Serv"
+          },
+          "summary": "Complete brake inspection, pad replacement, rotor service, and ABS diagnostics.",
+          "priceRange": "$149 - $499 per axle",
+          "estimatedTime": "1-3 hours",
+          "warrantyInfo": "24 months / 24,000 miles",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+            "alt": "Close-up of a vehicle brake assembly",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeService",
+          "id": "service-diagnostics",
+          "title": "Engine Diagnostics",
+          "path": "/services/engine-diagnostics",
+          "body": {
+            "processed": "<p>That check engine light could mean a dozen different things. Our advanced diagnostic equipment reads fault codes, monitors live data, and pinpoints the exact issue so we fix the right problem the first time.</p><h2>Diagnostic Capabilities</h2><ul><li>OBD-II fault code reading and interpretation</li><li>Live data stream analysis</li><li>Emission system diagnostics</li><li>Electrical system testing</li><li>Computer module programming and updates</li></ul>",
+            "summary": "That check engine light could mean a dozen different things. Our advanced diagnostic equipment reads fault codes, monitors live data, and pinpoints the exact issue so we fix the right problem the firs"
+          },
+          "summary": "Advanced computer diagnostics for check engine lights and performance issues.",
+          "priceRange": "$89 - $149",
+          "estimatedTime": "1-2 hours",
+          "warrantyInfo": "Diagnostic fee applied to repair",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
+            "alt": "Diagnostic equipment connected to vehicle engine",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "data": {
+    "nodeCoupons": {
+      "__typename": "NodeCouponConnection",
+      "nodes": [
+        {
+          "__typename": "NodeCoupon",
+          "id": "coupon-oil",
+          "title": "Synthetic Oil Change Special",
+          "path": "/coupons/oil-change-special",
+          "body": {
+            "processed": "<p>Save on a full synthetic oil change including a premium filter and our comprehensive multi-point inspection. Keep your engine running smoothly with the best protection available.</p>",
+            "summary": "Save on a full synthetic oil change including a premium filter and our comprehensive multi-point inspection. Keep your engine running smoothly with the best protection available."
+          },
+          "discountAmount": "$20 Off",
+          "couponCode": "SYNTH20",
+          "validUntil": {
+            "timestamp": 1782881999
+          },
+          "terms": {
+            "processed": "<p>Valid for full synthetic oil change only. One coupon per vehicle per visit. Cannot be combined with other offers. Must present coupon at time of service.</p>",
+            "summary": "Valid for full synthetic oil change only. One coupon per vehicle per visit. Cannot be combined with other offers. Must present coupon at time of service."
+          },
+          "image": {
+            "url": "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=800&q=80",
+            "alt": "Synthetic oil change special offer",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeCoupon",
+          "id": "coupon-brakes",
+          "title": "Brake Service Package",
+          "path": "/coupons/brake-service-deal",
+          "body": {
+            "processed": "<p>Get premium ceramic brake pads and new rotors at a discounted package price. Includes a free brake inspection and road test to ensure everything is working perfectly.</p>",
+            "summary": "Get premium ceramic brake pads and new rotors at a discounted package price. Includes a free brake inspection and road test to ensure everything is working perfectly."
+          },
+          "discountAmount": "$50 Off Per Axle",
+          "couponCode": "BRAKES50",
+          "validUntil": {
+            "timestamp": 1780289999
+          },
+          "terms": {
+            "processed": "<p>Applies to brake pad and rotor replacement on one or both axles. Includes ceramic pads and standard rotors. Performance upgrades available at additional cost. Cannot be combined with other offers.</p>",
+            "summary": "Applies to brake pad and rotor replacement on one or both axles. Includes ceramic pads and standard rotors. Performance upgrades available at additional cost. Cannot be combined with other offers."
+          },
+          "image": {
+            "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+            "alt": "Brake service discount offer",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeCoupon",
+          "id": "coupon-new-customer",
+          "title": "New Customer Welcome Discount",
+          "path": "/coupons/new-customer-welcome",
+          "body": {
+            "processed": "<p>First time at Summit Auto Care? Welcome! Enjoy 15% off any service on your first visit. We're confident you'll see the Summit difference and become a customer for life.</p>",
+            "summary": "First time at Summit Auto Care? Welcome! Enjoy 15% off any service on your first visit. We're confident you'll see the Summit difference and become a customer for life."
+          },
+          "discountAmount": "15% Off First Visit",
+          "couponCode": "WELCOME15",
+          "validUntil": {
+            "timestamp": 1798783199
+          },
+          "terms": {
+            "processed": "<p>Valid for new customers only. Maximum discount of $150. Applies to labor charges. Cannot be combined with other offers or applied to tires or parts-only purchases.</p>",
+            "summary": "Valid for new customers only. Maximum discount of $150. Applies to labor charges. Cannot be combined with other offers or applied to tires or parts-only purchases."
+          },
+          "image": {
+            "url": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
+            "alt": "New customer welcome offer",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
