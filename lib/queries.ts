@@ -82,7 +82,7 @@ export const GET_HOMEPAGE_DATA = gql`
         heroTitle
         heroSubtitle
         heroDescription { processed summary }
-        statsItems { ... on ParagraphStatItem { id title description { processed } icon } }
+        statsItems { ... on ParagraphStatItem { id title number label } }
         featuredItemsTitle
         ctaTitle
         ctaDescription { processed summary }

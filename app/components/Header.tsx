@@ -21,14 +21,29 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    const banner = document.querySelector('[class*="bg-amber-500"]')
-    if (banner) {
-      setBannerHeight(banner.getBoundingClientRect().height)
-      const observer = new MutationObserver(() => {
-        if (!document.querySelector('[class*="bg-amber-500"]')) setBannerHeight(0)
-      })
-      observer.observe(document.body, { childList: true, subtree: true })
-      return () => { observer.disconnect() }
+    const getBanner = () =>
+      document.querySelector<HTMLElement>('[data-demo-banner="true"]')
+
+    const applyHeight = () => {
+      const banner = getBanner()
+      setBannerHeight(banner ? banner.getBoundingClientRect().height : 0)
+    }
+
+    applyHeight()
+
+    let resizeObserver: ResizeObserver | null = null
+    const banner = getBanner()
+    if (banner && typeof ResizeObserver !== 'undefined') {
+      resizeObserver = new ResizeObserver(() => applyHeight())
+      resizeObserver.observe(banner)
+    }
+
+    const mutationObserver = new MutationObserver(() => applyHeight())
+    mutationObserver.observe(document.body, { childList: true, subtree: true })
+
+    return () => {
+      mutationObserver.disconnect()
+      if (resizeObserver) resizeObserver.disconnect()
     }
   }, [])
 
