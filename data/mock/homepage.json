@@ -19,28 +19,28 @@
               "__typename": "ParagraphStatItem",
               "id": "stat-years",
               "title": "",
-              "number": "30+",
+              "number": "30+", "value": "30+",
               "label": "Years in Business"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-vehicles",
               "title": "",
-              "number": "50,000+",
+              "number": "50,000+", "value": "50,000+",
               "label": "Vehicles Serviced"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-techs",
               "title": "",
-              "number": "12",
+              "number": "12", "value": "12",
               "label": "ASE-Certified Techs"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-rating",
               "title": "",
-              "number": "4.9",
+              "number": "4.9", "value": "4.9",
               "label": "Star Rating"
             }
           ],
