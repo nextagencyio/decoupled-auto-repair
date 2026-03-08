@@ -4,6 +4,7 @@ const path = require('path')
 const nextConfig = {
   outputFileTracingRoot: path.resolve(__dirname),
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'http',
