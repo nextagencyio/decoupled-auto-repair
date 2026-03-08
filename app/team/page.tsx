@@ -8,6 +8,7 @@ import Footer from '../components/Footer'
 import TeamMemberCard from '../components/TeamMemberCard'
 
 export const revalidate = 3600
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Team Members | Apex Auto Works',

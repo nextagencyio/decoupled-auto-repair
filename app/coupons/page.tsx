@@ -8,6 +8,7 @@ import Footer from '../components/Footer'
 import CouponCard from '../components/CouponCard'
 
 export const revalidate = 3600
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Coupons | Apex Auto Works',
