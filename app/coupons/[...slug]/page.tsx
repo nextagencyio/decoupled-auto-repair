@@ -24,7 +24,7 @@ interface CouponByPathData {
 async function getCoupon(path: string): Promise<DrupalCoupon | null> {
   try {
     const client = getClient()
-    const { data } = await client.raw(GET_COUPON_BY_PATH, { path })
+    const data = await client.raw(GET_COUPON_BY_PATH, { path })
     return data?.route?.entity || null
   } catch (error) {
     console.error('Error fetching coupon:', error)
