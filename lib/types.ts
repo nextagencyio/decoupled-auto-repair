@@ -57,30 +57,26 @@ export interface DrupalPage extends DrupalNode {
   }
 }
 
+export interface DrupalStatItem {
+  id: string
+  number?: string
+  label?: string
+}
+
 export interface DrupalHomepage extends DrupalNode {
   heroTitle?: string
   heroSubtitle?: string
   heroDescription?: {
     processed: string
   }
-  featuresTitle?: string
-  featuresSubtitle?: string
-  featuresItems?: DrupalFeature[]
+  statsItems?: DrupalStatItem[]
+  featuredItemsTitle?: string
   ctaTitle?: string
   ctaDescription?: {
     processed: string
   }
   ctaPrimary?: string
   ctaSecondary?: string
-}
-
-export interface DrupalFeature {
-  id: string
-  title: string
-  description?: {
-    processed: string
-  }
-  icon?: string
 }
 
 export interface HomepageData {
@@ -115,9 +111,9 @@ export interface DrupalTeamMember {
   path?: string
   body?: { processed: string; summary?: string }
   position?: string
-  certifications?: string
+  certifications?: string[]
   yearsExperience?: number
-  specialties?: string
+  specialties?: string[]
   photo?: { url: string; alt: string; width?: number; height?: number; variations?: { name: string; url: string; width: number; height: number }[] }
 }
 
@@ -135,7 +131,7 @@ export interface DrupalCoupon {
   discountAmount?: string
   couponCode?: string
   validUntil?: { timestamp: string }
-  terms?: { processed: string; summary?: string }
+  terms?: { processed: string }
   image?: { url: string; alt: string; width?: number; height?: number; variations?: { name: string; url: string; width: number; height: number }[] }
 }
 

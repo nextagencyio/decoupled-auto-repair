@@ -1,78 +1,6 @@
 // Tagged template that returns the query string
 const gql = (strings: TemplateStringsArray, ...values: any[]) => strings.reduce((a, s, i) => a + s + (values[i] || ''), '')
 
-export const GET_ARTICLE_TEASERS = gql`
-  query GetArticleTeasers($first: Int = 10) {
-    nodeArticles(first: $first, sortKey: CREATED_AT) {
-      nodes {
-        id
-        title
-        path
-        created {
-          timestamp
-        }
-        changed {
-          timestamp
-        }
-        ... on NodeArticle {
-          body {
-            processed
-            summary
-          }
-          image {
-            url
-            alt
-            width
-            height
-            variations(styles: [LARGE, MEDIUM, THUMBNAIL]) {
-              name
-              url
-              width
-              height
-            }
-          }
-        }
-      }
-    }
-  }
-`
-
-export const GET_ARTICLE_BY_PATH = gql`
-  query GetArticleByPath($path: String!) {
-    route(path: $path) {
-      ... on RouteInternal {
-        entity {
-          ... on NodeArticle {
-            id
-            title
-            body {
-              processed
-            }
-            created {
-              timestamp
-            }
-            changed {
-              timestamp
-            }
-            image {
-              url
-              alt
-              width
-              height
-              variations(styles: [LARGE, MEDIUM, THUMBNAIL]) {
-                name
-                url
-                width
-                height
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
-
 export const GET_HOMEPAGE_DATA = gql`
   query GetHomepageData {
     nodeHomepages(first: 1) {
@@ -82,11 +10,11 @@ export const GET_HOMEPAGE_DATA = gql`
         path
         heroTitle
         heroSubtitle
-        heroDescription { processed summary }
-        statsItems { ... on ParagraphStatItem { id title number label } }
+        heroDescription { processed }
+        statsItems { ... on ParagraphStatItem { id number label } }
         featuredItemsTitle
         ctaTitle
-        ctaDescription { processed summary }
+        ctaDescription { processed }
         ctaPrimary
         ctaSecondary
       }
@@ -100,38 +28,15 @@ export const GET_NODE_BY_PATH = gql`
       ... on RouteInternal {
         entity {
           ... on NodePage {
+            __typename
             id
             title
             body {
               processed
-            }
-          }
-          ... on NodeArticle {
-            id
-            title
-            body {
-              processed
-            }
-            created {
-              timestamp
-            }
-            changed {
-              timestamp
-            }
-            image {
-              url
-              alt
-              width
-              height
-              variations(styles: [LARGE, MEDIUM, THUMBNAIL]) {
-                name
-                url
-                width
-                height
-              }
             }
           }
           ... on NodeHomepage {
+            __typename
             id
             title
             heroTitle
@@ -139,24 +44,56 @@ export const GET_NODE_BY_PATH = gql`
             heroDescription {
               processed
             }
-            featuresTitle
-            featuresSubtitle
-            featuresItems {
-              ... on ParagraphFeatureItem {
+            statsItems {
+              ... on ParagraphStatItem {
                 id
-                title
-                description {
-                  processed
-                }
-                icon
+                number
+                label
               }
             }
+            featuredItemsTitle
             ctaTitle
             ctaDescription {
               processed
             }
             ctaPrimary
             ctaSecondary
+          }
+          ... on NodeService {
+            __typename
+            id
+            title
+            path
+            body { processed }
+            summary
+            priceRange
+            estimatedTime
+            warrantyInfo
+            image { url alt width height }
+          }
+          ... on NodeTeamMember {
+            __typename
+            id
+            title
+            path
+            body { processed }
+            position
+            certifications
+            yearsExperience
+            specialties
+            photo { url alt width height }
+          }
+          ... on NodeCoupon {
+            __typename
+            id
+            title
+            path
+            body { processed }
+            discountAmount
+            couponCode
+            validUntil { timestamp }
+            terms { processed }
+            image { url alt width height }
           }
         }
       }
@@ -194,12 +131,12 @@ export const GET_SERVICE_BY_PATH = gql`
             id
             title
             path
-          body { processed summary }
-          summary
-          priceRange
-          estimatedTime
-          warrantyInfo
-          image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
+            body { processed summary }
+            summary
+            priceRange
+            estimatedTime
+            warrantyInfo
+            image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
           }
         }
       }
@@ -237,12 +174,12 @@ export const GET_TEAM_MEMBER_BY_PATH = gql`
             id
             title
             path
-          body { processed summary }
-          position
-          certifications
-          yearsExperience
-          specialties
-          photo { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
+            body { processed summary }
+            position
+            certifications
+            yearsExperience
+            specialties
+            photo { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
           }
         }
       }
@@ -263,7 +200,7 @@ export const GET_COUPONS = gql`
           discountAmount
           couponCode
           validUntil { timestamp }
-          terms { processed summary }
+          terms { processed }
           image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
         }
       }
@@ -280,12 +217,12 @@ export const GET_COUPON_BY_PATH = gql`
             id
             title
             path
-          body { processed summary }
-          discountAmount
-          couponCode
-          validUntil { timestamp }
-          terms { processed summary }
-          image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
+            body { processed summary }
+            discountAmount
+            couponCode
+            validUntil { timestamp }
+            terms { processed }
+            image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
           }
         }
       }
